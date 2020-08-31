@@ -48,10 +48,30 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //nav bar changes
 
-const navBar = document.querySelector("nav");
-navBar.prepend("First");
-navBar.append("Last");
-// console.log(navBar);
+// let yee1 = document.createElement("a");
+// let yee2 = document.createElement("a");
+// const app = document.querySelector("nav");
+// app.append(yee1);
+// app.prepend(yee2);
+// const yee11 = document.querySelector("nav a:nth-of-type(7)");
+// yee11.textContent = "bonusLink1";
+// const yee12 = document.querySelector("nav a:nth-of-type(8)");
+// yee12.textContent = "bonusLink2";
+// yee11.style.color = "green";
+// yee12.style.color = "green";
+
+let first = document.createElement("a");
+first.textContent = "First Link";
+first.href = "#";
+
+let last = document.createElement("a");
+last.textContent = "Last Link";
+last.href = "#";
+
+const navApply = document.querySelector("nav");
+
+navApply.append(first);
+navApply.append(last);
 
 const nav1 = document.querySelector("nav a:nth-of-type(1)");
 nav1.textContent = siteContent["nav"]["nav-item-1"];
