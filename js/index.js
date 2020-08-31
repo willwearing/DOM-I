@@ -46,24 +46,36 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
+//nav bar changes
+
+const navBar = document.querySelector("nav");
+navBar.prepend("First");
+navBar.append("Last");
+// console.log(navBar);
+
 const nav1 = document.querySelector("nav a:nth-of-type(1)");
 nav1.textContent = siteContent["nav"]["nav-item-1"];
-// nav1.style.color = 'green'
+nav1.style.color = "green";
+
 const nav2 = document.querySelector("nav a:nth-of-type(2)");
 nav2.textContent = siteContent["nav"]["nav-item-2"];
-// nav2.style.color = 'green'
+nav2.style.color = "green";
+
 const nav3 = document.querySelector("nav a:nth-of-type(3)");
-nav3.textContent = siteContent["nav"]["nav-item-"];
-// nav3.style.color = 'green'
+nav3.textContent = siteContent["nav"]["nav-item-3"];
+nav3.style.color = "green";
+
 const nav4 = document.querySelector("nav a:nth-of-type(4)");
 nav4.textContent = siteContent["nav"]["nav-item-4"];
-// nav4.style.color = 'green'
+nav4.style.color = "green";
+
 const nav5 = document.querySelector("nav a:nth-of-type(5)");
 nav5.textContent = siteContent["nav"]["nav-item-5"];
-// nav5.style.color = 'green'
+nav5.style.color = "green";
+
 const nav6 = document.querySelector("nav a:nth-of-type(6)");
 nav6.textContent = siteContent["nav"]["nav-item-6"];
-// nav6.style.color = 'green'
+nav6.style.color = "green";
 
 //***<--Michelle's way of doing it and looping -->***//
 // const anchors = document.querySelectorAll("a");
@@ -72,6 +84,8 @@ nav6.textContent = siteContent["nav"]["nav-item-6"];
 // for (let i = 0; i < anchors.length; i++) {
 //   anchors[i].textContent = values[i];
 // }
+
+//selecting the cta tags and images
 
 const title = document.querySelector("h1");
 title.textContent = siteContent["cta"]["h1"];
@@ -82,12 +96,11 @@ titleButton.textContent = siteContent["cta"]["button"];
 let img1 = document.querySelector("#cta-img");
 img1.setAttribute("src", siteContent["cta"]["img-src"]);
 
-// const topContent = document.querySelector('.main-content .top-content .text-content');
-// console.log(topContent)
+//selecting all the h4's and paragraph tags, by doing so and creating an array, im changing them by calling them in order - super hacky, not happy with how its been done but it 'works'
 
 const h4s = document.querySelectorAll("h4");
 const ps = document.querySelectorAll("p");
-console.log(ps);
+// console.log(ps);
 
 h4s[0].textContent = siteContent["main-content"]["features-h4"];
 ps[0].textContent = siteContent["main-content"]["features-content"];
