@@ -60,19 +60,6 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 // yee11.style.color = "green";
 // yee12.style.color = "green";
 
-let first = document.createElement("a");
-first.textContent = "First Link";
-first.href = "#";
-
-let last = document.createElement("a");
-last.textContent = "Last Link";
-last.href = "#";
-
-const navApply = document.querySelector("nav");
-
-navApply.append(first);
-navApply.append(last);
-
 const nav1 = document.querySelector("nav a:nth-of-type(1)");
 nav1.textContent = siteContent["nav"]["nav-item-1"];
 nav1.style.color = "green";
@@ -96,6 +83,22 @@ nav5.style.color = "green";
 const nav6 = document.querySelector("nav a:nth-of-type(6)");
 nav6.textContent = siteContent["nav"]["nav-item-6"];
 nav6.style.color = "green";
+
+const navApply = document.querySelector("nav");
+//console log this, look at array, create loop and apply green by looping through the array
+
+let first = document.createElement("a");
+first.textContent = "First Link";
+first.href = "#";
+
+let last = document.createElement("a");
+last.textContent = "Last Link";
+last.href = "#";
+
+navApply.prepend(first);
+navApply.append(last);
+
+//create loop here for assigning green to all nav bar a elements
 
 //***<--Michelle's way of doing it and looping -->***//
 // const anchors = document.querySelectorAll("a");
