@@ -88,7 +88,7 @@ nav6.style.color = "green";
 //selecting the cta tags and images
 
 const title = document.querySelector("h1");
-title.textContent = siteContent["cta"]["h1"];
+title.innerHTML = "Dom <br> is <br> Awesome";
 
 const titleButton = document.querySelector("button");
 titleButton.textContent = siteContent["cta"]["button"];
