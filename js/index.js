@@ -48,43 +48,41 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //nav bar changes
 
-// let yee1 = document.createElement("a");
-// let yee2 = document.createElement("a");
-// const app = document.querySelector("nav");
-// app.append(yee1);
-// app.prepend(yee2);
-// const yee11 = document.querySelector("nav a:nth-of-type(7)");
-// yee11.textContent = "bonusLink1";
-// const yee12 = document.querySelector("nav a:nth-of-type(8)");
-// yee12.textContent = "bonusLink2";
-// yee11.style.color = "green";
-// yee12.style.color = "green";
+// const nav1 = document.querySelector("nav a:nth-of-type(1)");
+// nav1.textContent = siteContent["nav"]["nav-item-1"];
+// nav1.style.color = "green";
 
-const nav1 = document.querySelector("nav a:nth-of-type(1)");
-nav1.textContent = siteContent["nav"]["nav-item-1"];
-nav1.style.color = "green";
+// const nav2 = document.querySelector("nav a:nth-of-type(2)");
+// nav2.textContent = siteContent["nav"]["nav-item-2"];
+// nav2.style.color = "green";
 
-const nav2 = document.querySelector("nav a:nth-of-type(2)");
-nav2.textContent = siteContent["nav"]["nav-item-2"];
-nav2.style.color = "green";
+// const nav3 = document.querySelector("nav a:nth-of-type(3)");
+// nav3.textContent = siteContent["nav"]["nav-item-3"];
+// nav3.style.color = "green";
 
-const nav3 = document.querySelector("nav a:nth-of-type(3)");
-nav3.textContent = siteContent["nav"]["nav-item-3"];
-nav3.style.color = "green";
+// const nav4 = document.querySelector("nav a:nth-of-type(4)");
+// nav4.textContent = siteContent["nav"]["nav-item-4"];
+// nav4.style.color = "green";
 
-const nav4 = document.querySelector("nav a:nth-of-type(4)");
-nav4.textContent = siteContent["nav"]["nav-item-4"];
-nav4.style.color = "green";
+// const nav5 = document.querySelector("nav a:nth-of-type(5)");
+// nav5.textContent = siteContent["nav"]["nav-item-5"];
+// nav5.style.color = "green";
 
-const nav5 = document.querySelector("nav a:nth-of-type(5)");
-nav5.textContent = siteContent["nav"]["nav-item-5"];
-nav5.style.color = "green";
+// const nav6 = document.querySelector("nav a:nth-of-type(6)");
+// nav6.textContent = siteContent["nav"]["nav-item-6"];
+// nav6.style.color = "green";
 
-const nav6 = document.querySelector("nav a:nth-of-type(6)");
-nav6.textContent = siteContent["nav"]["nav-item-6"];
-nav6.style.color = "green";
+// const navApply = document.querySelector("nav");
 
-const navApply = document.querySelector("nav");
+const aTag = document.querySelectorAll("nav a");
+const values = Object.values(siteContent.nav);
+console.log(values)
+for (let i = 0; i < aTag.length; i++) {
+  aTag[i].textContent = values[i];
+  console.log(aTag[i].textContent = values[i]);
+  aTag[i].style.color = "green";
+}
+
 //console log this, look at array, create loop and apply green by looping through the array
 
 let first = document.createElement("a");
@@ -95,8 +93,8 @@ let last = document.createElement("a");
 last.textContent = "Last Link";
 last.href = "#";
 
-navApply.prepend(first);
-navApply.append(last);
+// navApply.prepend(first);
+// navApply.append(last);
 
 //create loop here for assigning green to all nav bar a elements
 
